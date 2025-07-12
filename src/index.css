@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import "tailwindcss";
+
+@theme{
+  --color-primary: #5AFCD1;
+  --color-black: #000000;
+
+  --font-ibm_plex_sans: 'IBM Plex Sans', 'sans-serif';
+
+  --animate-up-and-down: up-and-down 3s ease-in-out infinite;
+
+  @keyframes up-and-down {
+    0% {
+      transform: translateY(3px);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+    100% {
+      transform: translateY(3px);
+    }
+  }
+}
+
+
+body::-webkit-scrollbar {
+  width: 5px;
+  background-color:#5AFCD1;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
