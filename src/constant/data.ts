@@ -64,16 +64,67 @@ export const listProjects = [
     {
         id: 1,
         name: 'Wavebeat',
-        url: '/projects/wavebeat.jpg'
+        url: '/projects/wavebeat.jpg',
+        tech: [
+            {
+                name: 'NextJs',
+                url: '/tech/next_js.svg'
+            },
+            {
+                name: 'Typescript',
+                url: '/tech/typescript.svg'
+            },
+            {
+                name: 'tailwindcss',
+                url: '/tech/tailwindcss.svg'
+            }
+        ]
+
     },
     {
         id: 2,
         name: 'Secondary-sgd',
-        url: '/projects/secondary-sgd.png'
+        url: '/projects/secondary-sgd.png',
+                tech: [
+            {
+                name: 'React',
+                url: '/tech/react.svg'
+            },
+            {
+                name: 'Javascript',
+                url: '/tech/javascript.svg'
+            },
+            {
+                name: 'tailwindcss',
+                url: '/tech/tailwindcss.svg'
+            },
+            {
+                name: 'ExpressJs',
+                url: '/tech/mongodb.svg'
+            },
+            {
+                name: 'MongoDB',
+                url: '/tech/mongodb.svg'
+            }
+        ]
     },
     {
         id: 3,
         name: 'Tanimaju',
-        url: '/projects/tanimaju.png'
+        url: '/projects/tanimaju.png',
+        tech: [
+            {
+                name: 'HTML',
+                url: '/tech/html.svg'
+            },
+            {
+                name: 'CSS',
+                url: '/tech/css.svg'
+            },
+            {
+                name: 'Javascript',
+                url: '/tech/javascript.svg'
+            }
+        ]
     },
 ]

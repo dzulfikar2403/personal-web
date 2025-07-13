@@ -1,18 +1,21 @@
 import {
   Github,
+  Instagram,
   Linkedin,
+  Mail,
+  MapPin,
   Minimize,
-  SquareArrowOutUpRight,
-  SquareArrowUpRight,
+  Phone
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import clsx from "clsx";
 import { listProjects, listTech } from "./constant/data";
+import Navbar from "./components/Navbar";
+import CardProject from "./components/CardProject";
 
 function App() {
-  const [isActive, setIsActive] = useState("/");
   const [isTech, setIsTech] = useState("Language");
 
   useEffect(() => {
@@ -28,60 +31,8 @@ function App() {
 
   return (
     <div className="w-full font-ibm_plex_sans">
-      <nav
-        data-aos="fade-down"
-        className="px-8 py-4 flex justify-between items-end sticky top-0 left-0 right-0 z-50 bg-white/60 backdrop-blur-md"
-      >
-        <span>Dzulfikar2403</span>
-        <div className="flex gap-4 items-center text-sm">
-          <a
-            href={"#hero"}
-            className={
-              isActive === "/" || isActive === "#hero"
-                ? "underline underline-offset-4 transition-all"
-                : ""
-            }
-            onClick={() => setIsActive("#hero")}
-          >
-            Home
-          </a>
-          <a
-            href={"#about"}
-            className={
-              isActive === "#about"
-                ? "underline underline-offset-4 transition-all"
-                : ""
-            }
-            onClick={() => setIsActive("#about")}
-            >
-            About
-          </a>
-          <a
-            href={"#tech"}
-            className={
-              isActive === "#tech"
-              ? "underline underline-offset-4 transition-all"
-              : ""
-            }
-            onClick={() => setIsActive("#tech")}
-            >
-            Tech
-          </a>
-          <a
-            href={"#project"}
-            className={
-              isActive === "#project"
-                ? "underline underline-offset-4 transition-all"
-                : ""
-            }
-            onClick={() => setIsActive("#project")}
-          >
-            Project
-          </a>
-        </div>
-        <span>Hire</span>
-      </nav>
-      <section id="hero" className="relative pt-20">
+      <Navbar />
+      <section id="hero" className="relative pt-10 md:pt-20">
         <div className="absolute -z-1 top-1/2 left-2 md:left-20 -translate-y-1/2 size-10 md:size-30 bg-primary rounded-2xl blur-3xl"></div>
         <div
           data-aos="fade-right"
@@ -204,6 +155,7 @@ function App() {
               <div className="w-3/4 mx-auto flex justify-between px-4 overflow-x-auto gap-2 border-2 border-black bg-black rounded-full py-2">
                 {listTech.map((el) => (
                   <button
+                    key={el.title}
                     className={clsx("cursor-pointer", {
                       "bg-white border border-white px-2 text-black font-medium rounded-full":
                         isTech === el.title,
@@ -229,6 +181,7 @@ function App() {
                           key={el.name}
                           data-aos={"zoom-in"}
                           data-aos-delay={Number(`${i}00`)}
+                          data-aos-offset="100"
                           src={el.url}
                           alt={el.name}
                           title={el.name}
@@ -242,40 +195,66 @@ function App() {
           </section>
         </div>
       </section>
-      <section id="project" className="relative max-w-4xl mx-auto px-4 md:px-0 py-20">
+      <section
+        id="project"
+        className="relative max-w-4xl mx-auto px-4 md:px-0 py-20"
+      >
         <div className="absolute -z-1 top-2/3 left-1/2 -translate-x-1/2 size-10 md:size-52 bg-primary rounded-2xl blur-[80px]"></div>
         <h2 className="text-4xl">Personal Project</h2>
         <p>The Project i was build before </p>
         <div className="flex overflow-x-auto py-4">
-          {listProjects.map((el) => (
-            <div
-              key={el.id}
-              className={`group relative bg-white  min-h-[30rem] flex-1 cursor-pointer`}
-            >
-              <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-300"
-                style={{
-                  background: `url(${el.url})`,
-                  backgroundPosition: "top",
-                  backgroundSize: "cover",
-                }}
-              ></div>
-              <div className="relative w-full h-full group-hover:bg-gradient-to-b group-hover:from-transparent group-hover:to-black ">
-                <div className="transition-all duration-300 flex flex-col h-full justify-center items-center group-hover:text-white">
-                  <h3 className=" text-8xl">{el.id}</h3>
-                  <div className="absolute bottom-0 w-full px-4 py-2 flex justify-between items-center">
-                    <p>{el.name}</p>
-                    <SquareArrowOutUpRight size={18} />
-                  </div>
-                </div>
-              </div>
-            </div>
+          {listProjects.map((el:Project) => (
+            <CardProject key={el.id} project={el} />
           ))}
         </div>
       </section>
-      <footer className="max-w-4xl pt-20 mx-auto flex justify-center flex-col items-center">
-        <div className="w-full h-1 bg-gradient-to-r from-transparent via-slate-600 to-transparent" />
-        <p>2025 &copy; Dzulfikar Omar Y. All Rights reserved.</p>
+      <footer className="max-w-4xl py-20 mx-auto flex justify-center flex-col items-center">
+        <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-slate-600 to-transparent" />
+        <div className="w-full flex flex-col py-8 px-8 md:px-4 md:flex-row md:justify-between md:items-start">
+          <div className="space-y-4">
+            <h3 className="font-semibold text-lg">Dzulfikar2403</h3>
+            <div className="flex gap-2 text-sm">
+              <MapPin size={18} />
+              <p>JL. Telaga jambu blok b1/5, sawangan, depok</p>
+            </div>
+            <div className="flex gap-2 text-sm">
+              <Mail size={18} />
+              <p>dzulfikar2403@gmail.com</p>
+            </div>
+            <div className="flex gap-2 text-sm">
+              <Phone size={18} />
+              <p>(+62) 815-1192-1708</p>
+            </div>
+            <div className="flex gap-4 px-4 py-4 ">
+              <a href="https://github.com/dzulfikar2403" target="_blank" className="border-2 rounded-full p-2 transition-all cursor-pointer hover:bg-black hover:text-white hover:border-black">
+                <Github size={18} />
+              </a>
+              <a href="https://www.linkedin.com/in/dzulfikar-omar-yasir-368138319/" target="_blank" className="border-2 rounded-full p-2 transition-all cursor-pointer hover:bg-black hover:text-white hover:border-black">
+                <Linkedin size={18} />
+              </a>
+              <a href="https://www.instagram.com/dzullfi.24/" target="_blank" className="border-2 rounded-full p-2 transition-all cursor-pointer hover:bg-black hover:text-white hover:border-black">
+                <Instagram size={18} />
+              </a>
+            </div>
+          </div>
+          <div className="flex gap-8 md:w-1/2 md:justify-around">
+            <div className="space-y-4">
+              <h4 className="font-medium">Categories</h4>
+              <p className="text-sm">Technology</p>
+              <p className="text-sm">Programming</p>
+              <p className="text-sm">Portfolio</p>
+              <p className="text-sm">Profile</p>
+            </div>
+            <div className="space-y-4">
+              <h4 className="font-medium">Explore</h4>
+              <p className="text-sm">Home</p>
+              <p className="text-sm">About</p>
+              <p className="text-sm">Tech</p>
+              <p className="text-sm">Project</p>
+            </div>
+          </div>
+        </div>
+        <small>2025 &copy; Dzulfikar Omar Y. All Rights reserved.</small>
       </footer>
     </div>
   );
