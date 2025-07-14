@@ -19,7 +19,7 @@ export const listTech = [
                 url: '/tech/typescript.svg'
             },
             {
-                name: 'PostgresQl',
+                name: 'PostgresQL',
                 url: '/tech/postgresql.svg'
             },
             {
@@ -97,10 +97,6 @@ export const listProjects = [
             {
                 name: 'tailwindcss',
                 url: '/tech/tailwindcss.svg'
-            },
-            {
-                name: 'ExpressJs',
-                url: '/tech/mongodb.svg'
             },
             {
                 name: 'MongoDB',
