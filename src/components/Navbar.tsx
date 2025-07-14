@@ -14,7 +14,7 @@ const Navbar = () => {
       >
         {/* mobile view */}
         <div className="relative flex justify-between items-center md:hidden ">
-          <span className="font-semibold">Dzulfikar2403</span>
+          <span className="font-semibold">Dzulfikar Omar Yasir</span>
           <Menu
             size={20}
             className="transition-all hover:scale-105 active:scale-95 cursor-pointer"
@@ -27,7 +27,7 @@ const Navbar = () => {
           id="dektop"
           className="hidden relative md:flex md:justify-between md:items-center "
         >
-          <span className="font-semibold">Dzulfikar2403</span>
+          <span className="font-semibold">Dzulfikar Omar Yasir</span>
           <div className="flex gap-4 items-center text-sm">
             <a
               href={"#hero"}
@@ -92,7 +92,7 @@ const Navbar = () => {
               onClick={() => setIsOpen((prev) => !prev)}
               className="ml-auto transition-all hover:scale-105 active:scale-95 cursor-pointer"
             />
-            <h1 className="font-semibold py-4">Dzulfikar2403</h1>
+            <h1 className="font-semibold py-4">Dzulfikar Omar Yasir</h1>
             <div className="space-y-4 flex flex-col">
               <a
                 href={"#hero"}

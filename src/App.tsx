@@ -212,7 +212,7 @@ function App() {
         <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-slate-600 to-transparent" />
         <div className="w-full flex flex-col py-8 px-8 md:px-4 md:flex-row md:justify-between md:items-start">
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Dzulfikar2403</h3>
+            <h3 className="font-semibold text-lg">Dzulfikar Omar Yasir</h3>
             <div className="flex gap-2 text-sm">
               <MapPin size={18} />
               <p>JL. Telaga jambu blok b1/5, sawangan, depok</p>
@@ -254,7 +254,7 @@ function App() {
             </div>
           </div>
         </div>
-        <small>2025 &copy; Dzulfikar Omar Y. All Rights reserved.</small>
+        <small>2025 &copy; Dzulfikar Omar Yasir. All Rights reserved.</small>
       </footer>
     </div>
   );
