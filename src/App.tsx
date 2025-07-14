@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="w-full font-ibm_plex_sans">
       <Navbar />
-      <section id="hero" className="relative pt-10 md:pt-20">
+      <section id="hero" className="relative pt-5 md:pt-20">
         <div className="absolute -z-1 top-1/2 left-2 md:left-20 -translate-y-1/2 size-10 md:size-30 bg-primary rounded-2xl blur-3xl"></div>
         <div
           data-aos="fade-right"
