@@ -79,8 +79,14 @@ const Navbar = () => {
       </nav>
 
       {isOpen && (
-        <div className="fixed z-50 inset-0 transition-all backdrop-blur-md bg-white/60 ">
-          <div className="bg-white w-1/2 ml-auto p-4 h-full">
+        <div className="fixed z-50 inset-0 backdrop-blur-md bg-white/60" onClick={() => setIsOpen(prev => !prev)}>
+          <div
+            className={clsx("bg-white ml-auto p-4 h-full transition-all", {
+              "w-0 opacity-0 -translate-x-10": !isOpen,
+              "w-1/2 opacity-100 translate-x-0": isOpen,
+            })}
+            onClick={(e) => e.stopPropagation()}
+          >
             <X
               size={20}
               onClick={() => setIsOpen((prev) => !prev)}
