@@ -1,4 +1,5 @@
 import { SquareArrowOutUpRight } from "lucide-react";
+import { Link } from "react-router";
 
 const CardProject = ({project}: {project: Project}) => {
   return (
@@ -18,17 +19,17 @@ const CardProject = ({project}: {project: Project}) => {
         <div className="transition-all duration-300 flex flex-col h-full justify-center items-center group-hover:text-white">
           <h3 className=" text-8xl">{project.id}</h3>
           <div className="absolute bottom-0 w-full px-4 py-2 ">
-            <div className="flex justify-between items-center">
+            <div className="flex flex-col-reverse md:flex-row md:justify-between md:items-center">
               <p>{project.name}</p>
-              <SquareArrowOutUpRight size={18} />
+              <Link to={'#'} target="_blank" className="self-end" ><SquareArrowOutUpRight size={18} /></Link>
             </div>
-            <div className="flex gap-3 ">
+            <div className="flex flex-wrap">
               {project?.tech?.map((el) => (
                 <img
                   key={el.name}
                   src={el.url}
                   alt={el.name}
-                  className="hidden group-hover:block w-4 h-4 group-hover:my-2"
+                  className="hidden group-hover:block mx-1 w-4 h-4 group-hover:my-2"
                 />
               ))}
             </div>

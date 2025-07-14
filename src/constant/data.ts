@@ -83,7 +83,7 @@ export const listProjects = [
     },
     {
         id: 2,
-        name: 'Secondary-sgd',
+        name: 'Secondary sgd',
         url: '/projects/secondary-sgd.png',
                 tech: [
             {
