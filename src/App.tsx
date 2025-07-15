@@ -101,6 +101,7 @@ function App() {
               src="/infradigital_nusantara_logo.png"
               alt="IDN"
               className="size-15"
+              title="InfraDigital Nusantara"
             />
           </div>
         </div>
