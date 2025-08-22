@@ -14,6 +14,7 @@ import clsx from "clsx";
 import { listProjects, listTech } from "./constant/data";
 import Navbar from "./components/Navbar";
 import CardProject from "./components/CardProject";
+import { Link } from "react-router";
 
 function App() {
   const [isTech, setIsTech] = useState("Language");
@@ -41,11 +42,11 @@ function App() {
         >
           <div className="px-4 md:px-0 flex-1 space-y-4">
             <h1 className=" text-4xl ">
-              Hi, Im Dzulfikar. <br /> a <b>Web Developer</b> <br /> Based on{" "}
+              Hi, Im Dzulfikar. <br /> a <b>Jr. Data Analyst</b> <br /> Based on{" "}
               <b>Indonesia</b>
             </h1>
             <p>
-              as a Web developer, i created the website with my favorite tech
+              as a Data Enthusiast, i enjoy solve challenge or task with my favorite tech
             </p>
             <div className="flex gap-6 items-center">
               <button
@@ -55,8 +56,12 @@ function App() {
                 Contact
               </button>
               <div className="flex gap-4">
-                <Github size={18} />
-                <Linkedin size={18} />
+                <Link to={"https://github.com/dzulfikar2403"} target="_blank">
+                  <Github size={18} />
+                </Link>
+                <Link to={"https://www.linkedin.com/in/dzulfikar-omar-yasir-368138319/"} target="_blank">
+                  <Linkedin size={18} />
+                </Link>
               </div>
             </div>
             <small className="flex items-center gap-1">
@@ -124,13 +129,9 @@ function App() {
             </div>
             <div className="flex-1">
               <p>
-                I am a graduated student from Vocational High School, majoring
-                in Software Engineering. I have over one year of experience in
-                JavaScript programming and have worked with modern web
-                technologies like Next.js & postgresQL. <br /> <br />I am
-                passionate about building web applications, solving query,
-                learning new technologies, and improving my coding skills.
-                Always eager to take on new challenges and grow as a developer!{" "}
+                I am a graduated student from Vocational High School, majoring in Software Engineering. I have around one year of experience in JavaScript & PostgresQL. and currently, i also still learning about data analyst.
+                <br /><br />
+                I am passionate about analyzing data, solving challenges, learning new technologies, and improving my coding skills. Always eager to take on new challenges and grow as a software engineer!
               </p>
             </div>
           </section>

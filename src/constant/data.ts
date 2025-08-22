@@ -55,6 +55,14 @@ export const listTech = [
             {
                 name: 'Figma',
                 url: '/tech/figma.svg'
+            },
+            {
+                name: 'Excel',
+                url: '/tech/excel.svg'
+            },
+            {
+                name: 'Power BI',
+                url: '/tech/power-bi.svg'
             }
         ]
     },
@@ -65,6 +73,7 @@ export const listProjects = [
         id: 1,
         name: 'Wavebeat',
         url: '/projects/wavebeat.jpg',
+        linkSource: "https://github.com/dzulfikar2403/WaveBeat",
         tech: [
             {
                 name: 'NextJs',
@@ -83,43 +92,25 @@ export const listProjects = [
     },
     {
         id: 2,
-        name: 'Secondary sgd',
-        url: '/projects/secondary-sgd.png',
-                tech: [
+        name: 'PostgresQL Challenges',
+        url: '/projects/PostgresQL-Challenges.png',
+        linkSource: "https://github.com/dzulfikar2403/daily-routine",
+        tech: [
             {
-                name: 'React',
-                url: '/tech/react.svg'
-            },
-            {
-                name: 'Javascript',
-                url: '/tech/javascript.svg'
-            },
-            {
-                name: 'tailwindcss',
-                url: '/tech/tailwindcss.svg'
-            },
-            {
-                name: 'MongoDB',
-                url: '/tech/mongodb.svg'
+                name: 'PostgresQL',
+                url: '/tech/postgresql.svg'
             }
         ]
     },
     {
         id: 3,
-        name: 'Tanimaju',
-        url: '/projects/tanimaju.png',
+        name: 'destination analyze',
+        url: '/projects/destination-analyze-power-BI.png',
+        linkSource: "https://github.com/dzulfikar2403/destination-analyze",
         tech: [
             {
-                name: 'HTML',
-                url: '/tech/html.svg'
-            },
-            {
-                name: 'CSS',
-                url: '/tech/css.svg'
-            },
-            {
-                name: 'Javascript',
-                url: '/tech/javascript.svg'
+                name: 'Power BI',
+                url: '/tech/power-bi.svg'
             }
         ]
     },

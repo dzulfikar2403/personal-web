@@ -21,7 +21,7 @@ const CardProject = ({project}: {project: Project}) => {
           <div className="absolute bottom-0 w-full px-4 py-2 ">
             <div className="flex flex-col-reverse md:flex-row md:justify-between md:items-center">
               <p>{project.name}</p>
-              <Link to={'#'} target="_blank" className="self-end" ><SquareArrowOutUpRight size={18} /></Link>
+              <Link to={project.linkSource} target="_blank" className="self-end" ><SquareArrowOutUpRight size={18} /></Link>
             </div>
             <div className="flex flex-wrap">
               {project?.tech?.map((el) => (
